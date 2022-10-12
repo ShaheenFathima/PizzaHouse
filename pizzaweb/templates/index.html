@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Pizza Order</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .inline {display:inline-block}
+        h1 {color: white;font-weight: bold;opacity: 1;}
+        p {color: white;font-weight: bold;opacity: 1;}
+        label {color: white;font-weight: bold;opacity: 1;}
+        .form-div {color: white;}
+    </style>
+</head>
+
+<body id="page-top">
+    <header class="masthead" style="background-image:url('assets/img/intro-bg.jpg');">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <form action="/admin" style="display:inline-block;background-color:#ff5555"><input type="submit" value="Admin Page" /></form> <form action="/newcode" style="display:inline-block;background-color:#ff5555"><input type="submit" value="Create Code" /></form>
+                        <br><br>
+                        <h1 class="brand-heading" style="background-color: #ff5555">Order Pizza</h1>
+                        <p class="intro-text" style="background-color: #ff5555"> - Submit your order below - </p>
+                        <div class="form-div">
+                            <p style="background-color:darkred">{{ message }}</p>
+                        <form action="/" method="POST">
+                        <label class="intro-text" for="fname" style="background-color: #ff5555">Name:</label><br>
+                        <input type="text" id="fname" name="fname"><br><br>
+                        <label class="intro-text" for='dropdown' style="background-color: #ff5555">Pizza:</label><br>
+                        <select name = "dropdown">
+                            <option value = "Pepperoni" selected>Pepperoni</option>
+                            <option value = "Margherita">Margherita</option>
+                            <option value = "Meteor">Meteor</option>
+                        </select><br><br>
+                        <label class="intro-text" for="code" style="background-color: #ff5555">Order Code:</label><br>
+                        <input type="number" id="code" name="code" value="{{ code }}" {{ disabled }}><br><br>
+                        <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="map-clean"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="assets/js/grayscale.js"></script>
+    
+</body>
+</html>
